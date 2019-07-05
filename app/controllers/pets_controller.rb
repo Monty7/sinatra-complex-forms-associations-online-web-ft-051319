@@ -30,7 +30,7 @@ class PetsController < ApplicationController
     erb :'/pets/edit'
   end
 
-  patch '/pets/:id' do 
+  post '/pets/:id' do 
     binding.pry
     @pet = Pet.find(params[:id])
     @pet.update(params["pet"])
